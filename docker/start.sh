@@ -5,7 +5,7 @@ cp /tinyproxy/tinyproxy.conf /tmp/tinyproxy.conf
 ip=$(cat /etc/hosts | grep  wireguard | awk '{print $1}')
 gateway=$(route -n | grep 'UG[ \t]' | awk '{print $2}')
 echo "" >> /tmp/tinyproxy.conf
-echo "#Added by start.sh. These will be overwridden " >> /tmp/tinyproxy.conf
+echo "#Added by start.sh. These will be overwritten " >> /tmp/tinyproxy.conf
 echo "Listen $ip" >> /tmp/tinyproxy.conf
 echo "Allow $ip" >> /tmp/tinyproxy.conf
 echo "Allow $gateway" >> /tmp/tinyproxy.conf
